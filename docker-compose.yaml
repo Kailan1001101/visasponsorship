@@ -1,0 +1,24 @@
+services:
+  db:
+    container_name: VisaSponsorshipDB
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: kailan
+      POSTGRES_PASSWORD: password
+      PGDATA: /data/postgres
+    volumes:
+      - visasponsorship_volume:/var/lib/docker/volumes/visasponsorship_volume/_data
+    ports:
+      - "5332:5432"
+    networks:
+      - db
+    restart: unless-stopped
+
+
+networks:
+  db:
+    driver: bridge
+
+volumes:
+  visasponsorship_volume:
+
