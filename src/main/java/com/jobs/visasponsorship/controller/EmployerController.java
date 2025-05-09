@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/")
+@RequestMapping("/employer")
 public class EmployerController {
 
     public final EmployerService employerService;
@@ -22,7 +22,7 @@ public class EmployerController {
     }
 
     @PostMapping
-    public void addNewSoftwareEngineer(@RequestBody Employer employer){
+    public void addEmployer(@RequestBody Employer employer){
         employerService.insertEmployer(employer);
     }
 
