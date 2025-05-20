@@ -8,7 +8,7 @@ import jakarta.persistence.Id;
 import java.util.Date;
 
 @Entity
-public class Employer {
+public class Employer extends User{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
