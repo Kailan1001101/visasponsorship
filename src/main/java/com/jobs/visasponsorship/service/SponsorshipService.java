@@ -11,5 +11,5 @@ public class SponsorshipService {
         this.sponsorshipRepository = sponsorshipRepository;
     }
 
-    public List<Sponsorship> get
+
 }
