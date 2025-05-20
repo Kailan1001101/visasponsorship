@@ -1,37 +1,38 @@
-package com.jobs.visasponsorship.entity;
+package com.jobs.visasponsorship.dto;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-
-import java.util.Date;
-
-@Entity
-public class JobSeeker extends User {
-
-
+public class CreateJobSeekerRequest {
+    private String name;
+    private String password;
+    private String email;
     private String resumeURL;
     private String yearsExperience;
     private String[] skills;
     private String location;
     private String visaStatus;
-    private Date createdAt;
 
-    public JobSeeker(){
-
+    public String getName() {
+        return name;
     }
 
-    public JobSeeker(String resumeURL, String yearsExperience, String[] skills, String location, String visaStatus, Date createdAt) {
-
-        this.resumeURL = resumeURL;
-        this.yearsExperience = yearsExperience;
-        this.skills = skills;
-        this.location = location;
-        this.visaStatus = visaStatus;
-        this.createdAt = createdAt;
+    public void setName(String name) {
+        this.name = name;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
     public String getResumeURL() {
         return resumeURL;
@@ -72,15 +73,4 @@ public class JobSeeker extends User {
     public void setVisaStatus(String visaStatus) {
         this.visaStatus = visaStatus;
     }
-
-    public Date getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(Date createdAt) {
-        this.createdAt = createdAt;
-    }
-
-
-
 }
