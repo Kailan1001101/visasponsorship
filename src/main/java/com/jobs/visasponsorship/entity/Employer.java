@@ -10,9 +10,7 @@ import java.util.Date;
 @Entity
 public class Employer extends User{
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+
     private String companyName;
     private String website;
     private String industry;
@@ -22,8 +20,8 @@ public class Employer extends User{
 
     }
 
-    public Employer(Long id, String companyName, String website, String industry, String location, Boolean verified, Date firstDate) {
-        this.id = id;
+    public Employer(String companyName, String website, String industry, String location, Boolean verified, Date firstDate) {
+
         this.companyName = companyName;
         this.website = website;
         this.industry = industry;
@@ -79,9 +77,4 @@ public class Employer extends User{
         return firstDate;
     }
 
-
-
-
-
-    
 }
